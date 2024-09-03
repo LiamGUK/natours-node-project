@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    block head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    link(rel="stylesheet" href="/css/style.css")
+    link(rel="shortcut icon" type="image/png" href="/img/favicon.png")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,700")
+
+    title Natours | #{title}
+
+  body
+    // HEADER
+    //- To import a separate pug template into another file - use include and name of file (will add pug markup from matching file in directory into this file)
+    include _header
+
+    // CONTENT
+    //- When wanting to extend a block of template HTML into another can use block and give it a name - can then use other pug files to extend content into this section of the HTML template file
+    block content
+      h1 This is a placeholder heading
+
+    // FOOTER
+    include _footer
+
+    script(src="/js/bundle.js")

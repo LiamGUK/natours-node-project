@@ -1,0 +1,26 @@
+//- Pug - whitespace sensitive syntax - space indentation indicates a nested element in HTML markup
+doctype html
+html
+  head
+    //- HTML elements and text content are separated by a space - Not opening and closing tags required
+    //- To add variable value to string need to use interpolation syntax - use #{VARIABLE NAME}
+    title Natours - #{tour}
+    link(rel='stylesheet' href='css/style.css')
+    //- <link rel='stylesheet' href='css/style.css />
+    //- Adding HTML attributes to elements are done inside () include all attributes required inside.
+    link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+
+  body
+    //- To use variables passed to template from render method add = operator to element with space then name of the variable (will render element with variable content on page)
+    h1= tour
+    //- h1 The Park Camper
+    //- <h1>The Park Camper</h1>
+
+    //- Can attach and run simple JS methods on elements by calling on element text content
+    h2= user.toUpperCase()
+
+    //- Can execute non buffered code in pug files and can render with normal HTML elements
+    - const x = 9;
+    h2= 2 * x
+
+    p This is just some text
