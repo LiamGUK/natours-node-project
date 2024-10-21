@@ -7,8 +7,8 @@
     "start": "nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js",
-    "watch": "esbuild ./public/js/index.js --bundle --minify --sourcemap --outfile=./public/js/bundle.js --watch",
-    "build": "esbuild ./public/js/index.js --bundle --minify --sourcemap --outfile=./public/js/bundle.js --target=chrome58,firefox57,safari9,edge16",
+    "watch": "esbuild ./public/js/index.js --bundle --sourcemap --outfile=./public/js/bundle.js --watch",
+    "build": "esbuild ./public/js/index.js --bundle --minify --outfile=./public/js/bundle.js",
     "watchCompile": "npm-run-all start watch --parallel"
   },
   "keywords": [],
